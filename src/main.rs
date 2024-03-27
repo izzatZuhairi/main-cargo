@@ -70,6 +70,60 @@ fn main() {
     fn rect2(dimension: (u32, u32)) -> u32 {
         dimension.0 * dimension.1
     }
+<<<<<<< HEAD
+=======
+
+    #[allow(dead_code)]
+    #[derive(Debug)]
+    struct Rectangle {
+        width: u32,
+        height: u32,
+    }
+
+    let rectangle = Rectangle {
+        width: 20,
+        height: 30,
+    };
+
+    println!("rectangle is {:?}", rectangle);
+    println!("rectangle printing using # {:#?}", rectangle);
+
+    let scale = 2;
+    let rect_debug = Rectangle {
+        width: dbg!(20 * scale),
+        height: 50,
+    };
+
+    dbg!(rect_debug);
+
+    // EOF struct
+
+    impl Rectangle {
+        fn area(&self) -> u32 {
+            self.width * self.height
+        }
+    }
+
+    let rect_method = Rectangle {
+        width: 11,
+        height: 12,
+    };
+
+    println!("rect_method = {}", rect_method.area());
+
+    impl Rectangle {
+        fn square(size: u32) -> Self {
+            Self {
+                width: size,
+                height: size,
+            }
+        }
+    }
+
+    let sq = Rectangle::square(20);
+
+    println!("Square dimension is - {:?}", sq);
+>>>>>>> eec4d73 (First push)
 }
 
 fn first_word(s: &String) -> &str {
