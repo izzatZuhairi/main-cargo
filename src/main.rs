@@ -138,6 +138,40 @@ fn main() {
     let some_char = Some("e");
 
     println!("some_number {:?}, some_char {:?}", some_number, some_char);
+
+    #[allow(dead_code)]
+    enum Coin {
+        Penny,
+        Nickel,
+    }
+
+    #[allow(dead_code)]
+    fn value_in_cents(coin: Coin) -> u8 {
+        match coin {
+            Coin::Penny => {
+                println!("Lucky Penny");
+                1
+            }
+            Coin::Nickel => 5,
+        }
+    }
+
+    let config_max = Some(3u8);
+    // match config_max {
+    //     Some(max) => println!("The max config is {max}"),
+    //     _ => (),
+    // }
+
+    if let Some(max) = config_max {
+        println!("The max config is {max}")
+    }
+
+    let dice_roll = 9;
+    match dice_roll {
+        3 => println!("its 3"),
+        7 => println!("its 7"),
+        _ => println!("neither"),
+    }
 }
 
 fn first_word(s: &String) -> &str {
