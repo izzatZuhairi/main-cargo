@@ -172,6 +172,28 @@ fn main() {
         7 => println!("its 7"),
         _ => println!("neither"),
     }
+<<<<<<< HEAD
+=======
+
+    // VECTOR
+
+    // let mut v = Vec::new();
+
+    // v.push(1);
+    // v.push(2);
+    // v.push(3);
+
+    let vconst = vec![1, 2, 3, 4, 5];
+
+    let third: &i32 = &vconst[2];
+    println!("The third is {third}");
+
+    let third2: Option<&i32> = vconst.get(2);
+    match third2 {
+        Some(third) => println!("The third element is {third}"),
+        None => println!("No third element"),
+    }
+>>>>>>> b9adc24 (More study -2)
 }
 
 fn first_word(s: &String) -> &str {
