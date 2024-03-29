@@ -70,8 +70,6 @@ fn main() {
     fn rect2(dimension: (u32, u32)) -> u32 {
         dimension.0 * dimension.1
     }
-<<<<<<< HEAD
-=======
 
     #[allow(dead_code)]
     #[derive(Debug)]
@@ -123,7 +121,23 @@ fn main() {
     let sq = Rectangle::square(20);
 
     println!("Square dimension is - {:?}", sq);
->>>>>>> eec4d73 (First push)
+
+    #[derive(Debug)]
+    #[allow(dead_code)]
+    enum People {
+        Name(String),
+        Age(u32),
+    }
+
+    let people_name = People::Name(String::from("Johnson"));
+    let people_age = People::Age(28);
+
+    println!("name = {:?}, age = {:?} ", people_name, people_age);
+
+    let some_number = Some(5);
+    let some_char = Some("e");
+
+    println!("some_number {:?}, some_char {:?}", some_number, some_char);
 }
 
 fn first_word(s: &String) -> &str {
@@ -144,6 +158,7 @@ fn dangling_p() {
     println!("reference to nothing {reference_to_nothing}");
 }
 
+#[allow(clippy::let_and_return)]
 fn dangle() -> String {
     let s = String::from("dangle");
 
