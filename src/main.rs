@@ -172,8 +172,6 @@ fn main() {
         7 => println!("its 7"),
         _ => println!("neither"),
     }
-<<<<<<< HEAD
-=======
 
     // VECTOR
 
@@ -193,7 +191,6 @@ fn main() {
         Some(third) => println!("The third element is {third}"),
         None => println!("No third element"),
     }
->>>>>>> b9adc24 (More study -2)
 }
 
 fn first_word(s: &String) -> &str {
